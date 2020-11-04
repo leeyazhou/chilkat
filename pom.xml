@@ -12,29 +12,12 @@
     <packaging>pom</packaging>
     <modules>
         <module>chilkat-common</module>
-        <module>chilkat-windows</module>
-        <module>chilkat-osx</module>
-        <module>chilkat-linux</module>
         <module>chilkat</module>
     </modules>
     <properties>
         <chilkat.version>9.5.0</chilkat.version>
     </properties>
     <build>
-        <plugins>
-            <!--            <plugin>-->
-            <!--                <groupId>org.apache.maven.plugins</groupId>-->
-            <!--                <artifactId>maven-shade-plugin</artifactId>-->
-            <!--                <executions>-->
-            <!--                    <execution>-->
-            <!--                        <goals>-->
-            <!--                            <goal>shade</goal>-->
-            <!--                        </goals>-->
-            <!--                        <phase>package</phase>-->
-            <!--                    </execution>-->
-            <!--                </executions>-->
-            <!--            </plugin>-->
-        </plugins>
         <extensions>
             <extension>
                 <groupId>kr.motd.maven</groupId>
