@@ -8,7 +8,7 @@
 
 1. pom.xml引入扩展插件：
 
-```
+``` xml
 <build>
 	<extensions>
 		<extension>
@@ -22,10 +22,13 @@
 
 2. 引用chilkat依赖
 
-```
+通过属性*classifier*来区分不同的操作系统环境
+
+``` xml
 <dependency>
 	<groupId>com.github.leeyazhou.chilkat</groupId>
-	<artifactId>chilkat-${os.detected.name}</artifactId>
+	<artifactId>chilkat</artifactId>
 	<version>9.5.0</version>
+	<classifier>${os.detected.name}</classifier>
 </dependency>
 ```
