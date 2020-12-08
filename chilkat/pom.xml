@@ -4,11 +4,26 @@
     <parent>
         <groupId>com.github.leeyazhou.chilkat</groupId>
         <artifactId>chilkat-parent</artifactId>
-        <version>9.5.0</version>
+        <version>9.5.0.1</version>
     </parent>
     <artifactId>chilkat</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>com.chilkatsoft</groupId>
+            <artifactId>chilkat-linux</artifactId>
+            <version>${chilkat.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.chilkatsoft</groupId>
+            <artifactId>chilkat-osx</artifactId>
+            <version>${chilkat.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.chilkatsoft</groupId>
+            <artifactId>chilkat-windows</artifactId>
+            <version>${chilkat.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.github.leeyazhou.chilkat</groupId>
             <artifactId>chilkat-common</artifactId>
@@ -31,11 +46,9 @@
                         <configuration>
                             <artifactSet>
                                 <includes>
-                                    <include>com.chilkatsoft:chilkat-linux:9.5.0</include>
+                                    <include>com.chilkatsoft:chilkat-linux</include>
                                 </includes>
                             </artifactSet>
-                            <createDependencyReducedPom>true</createDependencyReducedPom>
-                            <keepDependenciesWithProvidedScope>true</keepDependenciesWithProvidedScope>
                             <filters>
                                 <filter>
                                     <artifact>*:*</artifact>
@@ -47,6 +60,7 @@
                             </filters>
                             <shadedArtifactAttached>true</shadedArtifactAttached>
                             <shadedClassifierName>linux</shadedClassifierName>
+                            <shadedArtifactId>chilkat</shadedArtifactId>
                         </configuration>
                     </execution>
                     <execution>
@@ -58,10 +72,9 @@
                         <configuration>
                             <artifactSet>
                                 <includes>
-                                    <include>com.chilkatsoft:chilkat-osx:9.5.0</include>
+                                    <include>com.chilkatsoft:chilkat-osx</include>
                                 </includes>
                             </artifactSet>
-                            <createDependencyReducedPom>true</createDependencyReducedPom>
                             <filters>
                                 <filter>
                                     <artifact>*:*</artifact>
@@ -85,10 +98,9 @@
                         <configuration>
                             <artifactSet>
                                 <includes>
-                                    <include>com.chilkatsoft:chilkat-windows:9.5.0</include>
+                                    <include>com.chilkatsoft:chilkat-windows</include>
                                 </includes>
                             </artifactSet>
-                            <createDependencyReducedPom>true</createDependencyReducedPom>
                             <filters>
                                 <filter>
                                     <artifact>*:*</artifact>
